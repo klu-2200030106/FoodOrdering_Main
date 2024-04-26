@@ -1,0 +1,167 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact Us - Food orders{% endblock %}
+
+{% block css %}
+
+/* Additional CSS for Contact Form */
+
+/* Style for the contact form container */
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-image: url('https://source.unsplash.com/1920x1080/?food,restaurant');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Satisfy', cursive;
+      font-size: 4rem;
+      text-align: center;
+      color: #2ecc71;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #81c644;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form label {
+      font-weight: 700;
+      color: #81c644;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #81c644;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-family: inherit;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form button[type="submit"] {
+      background-color: #81c644;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background-color: #2ecc71;
+      transform: scale(1.05);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+{% endblock %}
+
+{% block body %}
+<!--<div class="contact2" style="background-image:url(http://127.0.0.1:8000/media/shop/images/mama.png);height: 700px;" id="contact">-->
+     <div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone No:</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon">+91</span>
+            </div>
+            <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="basic-addon" placeholder="Enter Your Phone Number" required pattern="[0-9]{10}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="How May We Help You?" required minlength="6"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block js %}
+<script>
+
+$('#popcart').popover();
+updatePopover(cart);
+
+function updatePopover(cart) {
+    var popStr = "";
+    popStr = popStr + "<h5> Click <a href='/shop/checkout'><button class='btn btn-primary'>Here</button></a> to order </h5><div class='mx-2 my-2'>";
+    document.getElementById("popcart").setAttribute('data-content', popStr);
+    $('#popcart').popover();
+}
+
+{% if thank %}
+alert('Thanks for Contact with us. We will get back to you soon!');
+document.location = "/shop";
+{% endif %}
+
+</script>
+{% endblock %}

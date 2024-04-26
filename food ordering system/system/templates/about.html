@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Food Express</title>
+    <link rel="icon" href="https://example.com/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem ;
+    scroll-behavior: smooth;
+}
+:root
+{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+
+}
+
+         .navbar {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10; /* Ensure the navbar is on top */
+      transition: background-color 0.3s;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.95); /* Solid background on scroll */
+    }
+
+    .navbar a {
+      font-weight: 700;
+      color: #ff6b6b;
+      text-transform: uppercase;
+    }
+
+    .navbar a:hover {
+      color: #ff4d4d; /* Hover effect */
+    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #ffff;
+            background-color: white;
+        }
+
+        .bg-image {
+            position: relative;
+      background-image: url('https://images.unsplash.com/photo-1532009877282-3340270e0529?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 100px 0;
+        }
+
+        .bg-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+
+      .about {
+        background: rgb(224, 251, 222);
+        background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+        padding: 100px 0 20px 0;
+        text-align: center;
+      }
+
+      .about h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .about p {
+        font-size: 1rem;
+        color: #ffff;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about-info {
+        margin: 2rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+/* <!--      .about-img {-->
+<!--        width: 20rem;-->
+<!--        height: 20rem;-->
+
+<!--      }-->
+
+<!--      .about-img img {-->
+<!--        width: 100%;-->
+<!--        height: 100%;-->
+<!--        border-radius: 5px;-->
+<!--        object-fit: contain;-->
+<!--      }--> */
+      h1 {
+        font-family: 'Satisfy', cursive;
+        font-size: 4rem;
+        text-align: center;
+        color: #2ecc71;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+      .about-info p {
+        font-size: 1.3rem;
+        margin: 0 2rem;
+        text-align: justify;
+      }
+
+      button {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        margin: 2rem;
+        font-size: 1rem;
+        color: white;
+        background-color: #40b736;
+        text-align: center;
+        cursor: pointer;
+        width: 15rem;
+        border-radius: 4px;
+
+      }
+
+      button:hover {
+        background-color: orangered;
+        transition: .5s ease;
+      }
+
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+        }
+
+        .team-member:hover {
+            border-color: var(--main-color);
+    transform: scale(1.02);
+        }
+
+        span
+{
+    color: var(--main-color);
+}
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        /* Added styles */
+        h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 4rem;
+            text-align: center;
+            color: #2ecc71;
+            text-shadow: 2px 2px 4px rgba(188, 151, 151, 0.3);
+        }
+
+        .navbar {
+            background-color: #fff;
+        }
+
+        .social-icons a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-icons a:hover
+{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+    </style>
+</head>
+<body style="background-color: white;">
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">Food Express</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
+           <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="bg-image">
+        <div class="container">
+            <h1 class="mb-4"><span>About Food Express</span></h1>
+           <div class="about-info">
+      <div class="about-img">
+      <img src="http://127.0.0.1:8000/media/shop/images/laddu.png" alt="Geeksforgeeks" style="height: 400px;"> <!-- Corrected width -->
+      </div>
+      <div>
+        <p>Welcome to Food Express, your one-stop solution for all your online food ordering needs! We are dedicated to providing a seamless and enjoyable experience for our customers. Whether you're craving comfort food, international cuisine, or a quick bite, we've got you covered.</p>
+        <button>Read More...</button>
+      </div>
+    </div>
+  </section>
+            <h2 class="text-center my-4">Meet <span>Our Team</span></h2>
+            <div class="team">
+                <div class="team-member">
+                   <img src="http://127.0.0.1:8000/media/shop/images/ikram.jpg" alt="Md. Ikramullah">
+                    <h3><span>Md. Ikramullah</span></h3>
+                    <p class="role">UI/UX Designer</p>
+                    <p>Md. Ikramullah specializes in user interface design with a focus on Adobe XD, Figma, and Sketch.</p>
+                </div>
+
+                <div class="team-member">
+                   <img src="http://127.0.0.1:8000/media/shop/images/chudamani.jpg" alt="Chuda Mani Kakarla">
+                    <h3><span>Chuda Mani Kakarla</span></h3>
+                    <p class="role">Front-end Developer</p>
+                    <p>Chuda Mani Kakarla is an expert in HTML, CSS, and JavaScript, creating interactive and engaging user interfaces.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="http://127.0.0.1:8000/media/shop/images/bunny.jpg" alt="Rohith Kumar">
+                    <h3><span>Rohith Kumar</span></h3>
+                    <p class="role">Back-end Developer</p>
+                    <p>Rohith Kumar works with Django and PostgreSQL, focusing on server-side applications and database management.</p>
+                </div>
+            </div>
+
+          <div class="text-center my-4" style="font-size: 20px;"> <!-- Adjust the font size as needed -->
+    <p>If you'd like to get in touch with us, please visit our
+        <a href="/contact" style="font-size: 25px;">Contact</a> page. You can also follow us on social media for the latest updates and offers.</p>
+    <div class="social-icons">
+        <a href="#" class="text-dark mx-2" style="font-size: 30px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-dark mx-2" style="font-size: 30px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-dark mx-2" style="font-size: 30px;"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal({
+    reset: true,  // Resets any prior animations on elements
+    distance: '80px', // Distance from viewport edge to start animation
+    duration: 2000,  // Animation duration in milliseconds
+    delay: 200       // Delay before animation starts in milliseconds
+  });
+
+  ScrollReveal().reveal('.container ', { origin: 'top' });
+  ScrollReveal().reveal('.team-member .heading', { origin: 'top' });
+    </script>
+</body>
+</html>
